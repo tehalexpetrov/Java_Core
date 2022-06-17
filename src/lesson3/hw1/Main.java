@@ -21,32 +21,29 @@ public class Main {
         System.out.println("Введите Ваше число:");
         int userNum;
         int stop = 3;
-        for (int i = 0; i <= stop; i++) {
+        do {
+            System.out.println("Осталось: " + stop + " попытки");
+            boolean win = false;
+            for (int i = 0; i < stop; i++) {
                 userNum = sc.nextInt();
                 if (userNum == num) {
                     System.out.println("Победа! Ура");
-                    repeatGame();
-                }else if (userNum > num) {
+                    win = true;
+                    break;
+                } else if (userNum > num) {
                     System.out.println("Введенное число больше");
                 } else if (userNum < num) {
                     System.out.println("Введенное число меньше");
                 }
-                System.out.println("Осталось: " + --stop + " попытки");
-            if (stop == 0){
-                repeatGame();
             }
-        }
-    }
-
-    private static  void repeatGame(){
-        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
-        waitUser = sc.nextInt();
-        switch(waitUser) {
-            case 1:
-                userNumber();
-            case 0:
-                System.out.println("Пока");
-                break;
-        }
+            if (win){
+                System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+            } else {
+                System.out.println("Вы проиграли! Правильный ответ " + num);
+                System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+            }
+            waitUser = sc.nextInt();
+        } while (waitUser == 1);
+        System.out.println("Пока");
     }
 }
