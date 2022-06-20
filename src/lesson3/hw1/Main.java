@@ -17,7 +17,6 @@ public class Main {
 
     private static void userNumber()  {
         int num = random.nextInt(9); //Получили случайное число от 0 до 9
-        System.out.println(num);
         System.out.println("Введите Ваше число:");
         int userNum;
         int stop = 3;
