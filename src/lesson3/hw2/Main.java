@@ -22,19 +22,25 @@ public class Main {
     }
 
     private static void arrPrint(String[] arr) {
-        int word = random.nextInt(arr.length); // случайоное слово из массива
-        System.out.println(arr[word]);
-        System.out.println("Введите слово");
-        String user = sc.nextLine();
 
-        for (int i = 0; i < ; i++) {
-            
-        }
-        
-        if(arr[word].equals(user)){
-            System.out.println("good");
-        } else {
-            System.out.println("loser");
+        while (true) {
+            int word = random.nextInt(arr.length); // случайоное слово из массива
+            System.out.println(arr[word]);
+            System.out.println("Введите слово");
+            String userAnswer = sc.nextLine();
+
+            if (userAnswer.equals(arr[word])) {
+                System.out.println("Правильно");
+                break;
+            } else {
+                for (int i = 0; i < 15; i++) {
+                    if (i < arr[word].length() && i < userAnswer.length() && arr[word].charAt(i) == userAnswer.charAt(i)) {
+                    } else {
+                        System.out.print("#");
+                    }
+                }
+            }
+            System.out.println("You guess, secret word " + arr[word]);
         }
     }
 }

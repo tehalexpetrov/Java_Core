@@ -19,7 +19,7 @@ public class Main {
         int num = random.nextInt(9); //Получили случайное число от 0 до 9
         System.out.println("Введите Ваше число:");
         int userNum;
-        int stop = 3;
+        int stop = 4;
         do {
             System.out.println("Осталось: " + stop + " попытки");
             boolean win = false;
@@ -31,7 +31,7 @@ public class Main {
                     break;
                 } else if (userNum > num) {
                     System.out.println("Введенное число больше");
-                } else if (userNum < num) {
+                } else {
                     System.out.println("Введенное число меньше");
                 }
             }
