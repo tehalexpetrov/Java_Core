@@ -28,6 +28,19 @@ public class game {
     }
 
     public static void printMap() {
+        System.out.print("  ");
+        for (int i = 0; i < SIZE; i++) {
+            System.out.printf("%d ", i + 1);
+        }
+        System.out.println();
 
+
+        for (int i = 0; i < SIZE; i++) {
+            System.out.printf("%d ", i + 1);
+            for (int j = 0; j < SIZE; j++) {
+                System.out.printf("%c ", map[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
