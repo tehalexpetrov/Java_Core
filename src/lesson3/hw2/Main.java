@@ -35,6 +35,7 @@ public class Main {
             } else {
                 for (int i = 0; i < 15; i++) {
                     if (i < arr[word].length() && i < userAnswer.length() && arr[word].charAt(i) == userAnswer.charAt(i)) {
+                        System.out.println(userAnswer.charAt(i));
                     } else {
                         System.out.print("#");
                     }
